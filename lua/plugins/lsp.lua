@@ -2,6 +2,7 @@ return {
   {
     "neovim/nvim-lspconfig",
     -- other settings removed for brevity
+    dependencies = { "jose-elias-alvarez/typescript.nvim" },
     opts = {
       ---@type lspconfig.options
       servers = {
@@ -9,6 +10,17 @@ return {
           settings = {
             -- helps eslint find the eslintrc when it's placed in a subfolder instead of the cwd root
             workingDirectory = { mode = "auto" },
+          },
+        },
+        tsserver = {
+          keys = {
+            { "<leader>co", "<cmd>TypescriptOrganizeImports<CR>", desc = "Organize Imports" },
+            { "<leader>cR", "<cmd>TypescriptRenameFile<CR>", desc = "Rename File" },
+          },
+          settings = {
+            completions = {
+              completeFunctionCalls = true,
+            },
           },
         },
       },
@@ -30,6 +42,10 @@ return {
               end
             end,
           })
+        end,
+        tsserver = function(_, opts)
+          require("typescript").setup({ server = opts })
+          return true
         end,
       },
     },
