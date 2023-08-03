@@ -1,7 +1,6 @@
 return {
   {
     "catppuccin/nvim",
-    lazy = false,
     name = "catppuccin",
     opts = {
       flavour = "mocha",
@@ -22,9 +21,22 @@ return {
     },
   },
   {
+    "sainnhe/gruvbox-material",
+  },
+  {
+    "sainnhe/edge",
+  },
+  {
+    "navarasu/onedark.nvim",
+    name = "onedark",
+    opts = {
+      style = "warmer",
+    },
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "onedark",
     },
   },
 }
