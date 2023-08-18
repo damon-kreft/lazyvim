@@ -1,7 +1,14 @@
 local Util = require("lazyvim.util")
+local telescope = require("telescope")
 
 return {
   "nvim-telescope/telescope.nvim",
+  dependencies = {
+    "nvim-telescope/telescope-live-grep-args.nvim",
+    config = function()
+      telescope.load_extension("live_grep_args")
+    end,
+  },
   keys = {
     {
       "<leader>ss",
@@ -20,6 +27,11 @@ return {
         },
       }),
       desc = "Goto Symbol",
+    },
+    {
+      "<leader>/",
+      ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>",
+      desc = "Grep (root dir + args)",
     },
   },
   opts = {
