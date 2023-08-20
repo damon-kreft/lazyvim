@@ -4,3 +4,4 @@
 
 vim.opt.title = true
 vim.opt.titlestring = string.sub(vim.fn.getcwd(), -30)
+vim.opt.scrolloff = 10
