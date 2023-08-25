@@ -1,0 +1,6 @@
+{
+  "describe": {
+    "prefix": "desc",
+    "body": "describe('${1:description}', () => {\n\t${0}\n})"
+  }
+}
