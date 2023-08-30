@@ -4,3 +4,6 @@
 
 -- vim.keymap.set("n", "<C-d>", "<C-d>zz")
 -- vim.keymap.set("n", "<C-u>", "<C-u>zz")
+
+vim.keymap.set("n", "<S-h>", "<Nop>", { desc = "Prev buffer (DISABLED)" })
+vim.keymap.set("n", "<S-l>", "<Nop>", { desc = "Next buffer (DISABLED)" })
