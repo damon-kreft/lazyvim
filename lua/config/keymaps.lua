@@ -7,3 +7,7 @@
 
 vim.keymap.set("n", "<S-h>", "<Nop>", { desc = "Prev buffer (DISABLED)" })
 vim.keymap.set("n", "<S-l>", "<Nop>", { desc = "Next buffer (DISABLED)" })
+vim.keymap.set("n", "<Up>", "<Nop>", { desc = "Up (DISABLED)" })
+vim.keymap.set("n", "<Down>", "<Nop>", { desc = "Down (DISABLED)" })
+vim.keymap.set("n", "<Left>", "<Nop>", { desc = "Left (DISABLED)" })
+vim.keymap.set("n", "<Right>", "<Nop>", { desc = "Right (DISABLED)" })
